@@ -1,0 +1,68 @@
+*{
+    Font-family:"Helvetica";
+    color:white;
+}
+
+body{
+    /* background-image:url(https://www.everplans.com/sites/default/files/styles/article_header_image/public/memorial-candles-750.jpg?itok=nrU1tz6A); */
+    background-image:url(background.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+    text-align:center;
+}
+
+#title{
+    font-size:80px;
+    line-height: 15px;
+    font-family: 'Pinyon Script', cursive !important;
+}
+
+h2{
+    line-height:0px;
+    font-size:40px;
+    font-family: 'Pinyon Script', cursive !important;
+}
+
+#image{
+    width:40%;
+    max-width:350px;
+    max-height:80%;
+    border-radius:10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#img-caption{
+    font-size:10px;
+    color:#E0E0E0;
+}
+
+#img-div{
+    display:block;
+    text-align:center;
+    position:relative;
+}
+
+#button{
+    background-color:lightcoral;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius:5px;
+}
+
+#tribute-link{
+    color:black;
+    font-size:15px;
+}
+
+#tribute-info{
+    color:#E0E0E0;
+    background-color: black;
+    opacity:0.85;
+    display:inline-block;
+    font-size:20px;
+}

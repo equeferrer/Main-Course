@@ -5,7 +5,7 @@
 
 body{
     /* background-image:url(https://www.everplans.com/sites/default/files/styles/article_header_image/public/memorial-candles-750.jpg?itok=nrU1tz6A); */
-    background-image:url(background.jpg);
+    background-image:url(assets/Background.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     position:relative;

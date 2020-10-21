@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">TITLE HERE</h1>
+    <p id="description">DESCRIPTION HERE</p>
+    <form id="survey-form">
+        <!-- action="url" method="post" -->
+
+        <!-- Name -->   
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" name="name" id="name" required placeholder="e.g. Juan Dela Cruz">
+        
+        <!-- Email -->
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" name="email" id="email" required placeholder="Email Address">
+        <!-- Is this necessary: pattern=".+@globex.com" ?? -->
+
+        <!-- Number (min-max numbers) -->
+        <label for="number" id="number-label">Mobile Number:</label>
+        <input type="tel" name="number" id="number" pattern="[0]{1}[9]{1}[0-9]{9}" min="11" max="11" placeholder="Format: 09XXXXXXXXX">
+
+        <!-- Dropdown -->
+        <label for="dropdown" id="dropdown-label">How has your experience been with Avion School?</label>
+        <select name="dropdown" id="dropdown" required>
+                <option disabled selected value>--select an option--</option>
+                <option value="awesome">Awesome!</option>
+                <option value="spectacular">Spectacular!</option>
+                <option value="amazing">Amazing!</option>
+                <option value="incredible">Incredible!</option>
+                <option value="wonderful">Wonderful!</option>
+                <option value="fantastic">Fantastic!</option>
+        </select>
+        
+        <!-- Radio Buttons -->
+        <label for="best-instructor">Who has been your favorite instructor so far in the Main course?</label>
+        <input type="radio" name="best-instructor" id="Pau-label" value="Pau" checked>
+        <label for="Pau-label">Pau</label>
+        <input type="radio" name="best-instructor" id="Jethro-label" value="Jethro">
+        <label for="Jethro-label">Jethro</label>
+        <input type="radio" name="best-instructor" id="Riosa-label" value="Riosa">
+        <label for="Riosa-label">Riosa</label>
+
+        <!-- Checkbox -->
+        <label for="fave-project">What has been your favorite project so far?</label>
+        <input type="checkbox" name="fave-project" id="Tribute-Page-Label" value="Tribute Page">
+        <label for="Tribute-page">Tribute Page</label>
+        <input type="checkbox" name="fave-project" id="Forms-Label" value="Forms">
+        <label for="Forms">Forms</label>
+        <input type="checkbox" name="fave-project" id="Others-Label" value="Others">
+        <label for="Others">Others</label>
+        <!-- FOR REQUIRING ANSWER IN CHECKBOX: https://stackoverflow.com/questions/6218494/using-the-html5-required-attribute-for-a-group-of-checkboxes -->
+        
+        <!-- Comments -->
+        <label for ="feedback1">Additional Comments</label>
+        <textarea name="feedback1" id="feedback1" rows="5" cols="20" placeholder="We'd really appreciate your feedback/concerns, thank you!">
+        </textarea>
+        
+        <!-- Submit -->
+        <input type="submit">
+    </form>
+</body>
+</html>

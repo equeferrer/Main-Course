@@ -219,22 +219,6 @@ input[type="submit"]{
     transition: all .1s ease-in-out;
     font-weight:bold;
 }
-/* FLOATING LABELS */
-/* .form label {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    right: 50%;
-  }
-  
-input:not(:placeholder-shown) + label {
-    display: block;
-    color:white;
-  } */
-
-/* .container-2{
-    background-image:white !important;
-} */
 
 .bg-dark{
     /* background: #0C1B33; */
@@ -461,16 +445,6 @@ button:hover {
     background-color: #3E78B2;
     color:#E9EEFF;
 }
-/* 
-blockquote{
-    display:block;
-    position:relative;
-    width:80%;
-    margin:0 auto;
-    background-image:linear-gradient(rgba(22,27,64, 0.3), rgba(2,33,64, 0.3));
-    border-radius: 10px;
-    padding:0.5rem;
-} */
 
 figcaption{
     font-size:10px;
@@ -499,29 +473,6 @@ figcaption{
 .features-video{
     opacity:0.9;
 }
-/* For toggler menu */
-/* .menu-icon{
-    position:absolute;
-    cursor:pointer;
-    right:100%;
-    top:50%;
-    z-index:1028;
-    background-color: #1A1A54;
-}
-.toggle-menu{
-    position:absolute;
-    width:30px;
-    height: 100%;
-    right:5%;
-    top:50%;
-    z-index: 10;
-    cursor:pointer;
-    opacity:0;
-}
-
-.menu-icon, .toggle-menu{
-    display:none;
-} */
 
 footer{
     background-color:#1A1A54;
@@ -592,34 +543,4 @@ footer{
         padding-right:0;
         justify-content: center;
     }
-    /* Attempt at doing toggle menu bar
-    .line{
-        width:30px;
-        height:3px;
-        background: #E9EEFF;
-        margin:5px;
-        z-index:1030;
-        border-radius: 10px;
-    }
-    nav{
-        position:relative;
-    }
-    .navigation{
-        position:fixed;
-        top:0;
-        left:-100%;
-        background-color: #0C1B33;
-        height:100vh;
-        width:100%;
-        display:flex;
-        flex-direction: column;
-        opacity:1;
-        justify-content: center;
-        align-content:center;
-        transition:all 0.3s ease;
-    }
-    .nav-item{
-        margin-top:50px;
-        margin-bottom:50px;
-    } */
 }

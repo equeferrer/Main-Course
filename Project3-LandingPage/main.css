@@ -31,6 +31,42 @@ body{
     opacity:0.98;
 }
 
+.line{
+    width:30px;
+    height:3px;
+    background: #E9EEFF;
+    margin:5px;
+    z-index:1030;
+    border-radius: 10px;
+}
+
+.hamburger{
+    position:absolute;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    transition:0.3s;
+    z-index:1029;
+    top:0;
+    right:0;
+    margin-top: 10px
+}
+
+.toggle-menu{
+    position:absolute;
+    width:30px;
+    height:100%;
+    z-index:1030;
+    cursor:pointer;
+    opacity:0.05;
+    top: 0;
+    right: 0;
+}
+
+.hamburger, .toggle-menu{
+    display:none;
+}
+
 #nav-bar{
     position:relative;
     display:flex;
@@ -528,8 +564,12 @@ footer{
     }
 }
 
+#nav-bar input:checked ~.navigation{
+    right:0;
+}
+
 /* For smaller screens - changed margins for partner logos and nav-bar*/
-@media(max-width:833px){
+@media(max-width:848px){
     .p-logo{
         padding-left:7em;
         padding-right:7em;
@@ -538,9 +578,45 @@ footer{
         margin-left:2em;
         margin-right:2em;
     }
-    #nav-bar{
+    /* #nav-bar{
         padding-left:0;
         padding-right:0;
         justify-content: center;
+    } */
+    .hamburger, .toggle-menu{
+        display:block;
+    }
+    header{
+        padding:10px 20px;
+    }
+    .navigation{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position:fixed;
+        top:0;
+        right:-300px;
+        background:#0C1B33;
+        width:300px;
+        height:100%;
+        padding-top:60px;
+    }
+    .nav-item{
+        margin-top:30px
+    }
+    #nav-bar{
+        display:block;
+    }
+    #header-img{
+        width:200px;
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+    }
+    input{
+        margin-top:0;
+    }
+    #btn-nav{
+        padding:0.5em
     }
 }

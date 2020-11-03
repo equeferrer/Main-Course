@@ -585,9 +585,10 @@ footer{
     } */
     .hamburger, .toggle-menu{
         display:block;
+        padding: 0px 40px 0 0;
     }
     header{
-        padding:10px 20px;
+        padding:0px 0px 0 0;
     }
     .navigation{
         justify-content: start;
@@ -618,5 +619,46 @@ footer{
     }
     #btn-nav{
         padding:0.5em
+    }
+}
+
+@media(max-width:550px){
+    h1{
+        font-size:24px;
+    }
+    #anim{
+        letter-spacing: 2px;
+    }
+    h3{
+        font-size:22px;
+    }
+    input[type="email"]{
+        border-radius:10px;
+    }
+    input[type="submit"]{
+        border-radius:10px;
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+    }
+    .checkmark{
+        padding-left:10px;
+    }
+    #note{
+        font-size:12px;
+    }
+    .partner-logo{
+        max-width:60px;
+    }
+    .p-logo{
+        padding-left:0;
+        padding-right:0;
+    }
+    #pricing{
+        padding:0;
+    }
+    .hamburger, .toggle-menu{
+        display:block;
+        padding: 0px 60px 0 0;
     }
 }

@@ -7,7 +7,7 @@
 body, html{
     height:100%;
     width:100%;
-    color:#263B5E ;
+    color:#282828 ;
     background-image:url(http://payton.payo-themes.com/wp-content/uploads/2018/03/red.jpg);
     background-image:linear-gradient(to right, rgba(181,60,54, 0.6), rgb(181,60,54, 1), rgba(181,60,54, 0.6)),url("http://payton.payo-themes.com/wp-content/uploads/2018/03/red.jpg");
     background-repeat:no-repeat;
@@ -18,6 +18,35 @@ body, html{
     scroll-behavior: smooth;
 }
 
+h1{
+    color:#E9EEFF;
+    font-family: 'Lora', serif;
+    font-size:60px;
+    line-height: 60px;
+}
+
+h2{
+    font-size:28px;
+}
+
+h3{
+    color:#E9D9AF;
+    font-family:"Montserrat";
+    font-size:28px;
+    padding-top:0.5em;
+    font-weight:700;
+}
+
+h1, h2, h3, h4, p{
+    display:block;
+}
+
+p, a{
+    font-family: "Open Sans",sans-serif;
+    font-weight:350;
+}
+
+/* Navigation */
 nav{
     position:fixed;
     top:0;
@@ -124,34 +153,6 @@ nav{
     border: 1px solid white;
 }
 
-h1{
-    color:#E9EEFF;
-    font-family: 'Lora', serif;
-    font-size:60px;
-    line-height: 60px;
-}
-
-h2{
-    font-size:28px;
-}
-
-h3{
-    color:#E9D9AF;
-    font-family:"Montserrat";
-    font-size:28px;
-    padding-top:0.5em;
-    font-weight:700;
-}
-
-h1, h2, h3, h4, p{
-    display:block;
-}
-
-p, a{
-    font-family: "Open Sans",sans-serif;
-    font-weight:350;
-}
-
 .main-banner p{
     padding-right:150px;
     padding-top:1em;
@@ -161,7 +162,7 @@ p, a{
     font-weight:350;
     color:white;
 }
-
+/* for design part */
 .shape{
     position:absolute;
     width:60px;
@@ -253,7 +254,6 @@ header, section{
     grid-auto-rows:200px;
     justify-content: stretch;
     align-content: stretch;
-    
 }
 
 .about-header{
@@ -269,6 +269,7 @@ header, section{
     line-height: 30px;
 }
 
+/* About Section */
 .box{
     background:transparent;
     text-align:center;
@@ -497,6 +498,7 @@ h4{
     margin-bottom:0.5em;
 }
 
+/* Animation for header */
 .text_1 {
     animation: text1;
 }
@@ -586,8 +588,6 @@ h4{
     }
 }
   
-  
-  
 @keyframes caret {
     0%, 22%, 100% {
       opacity: 0;
@@ -601,6 +601,7 @@ h4{
     line-height: 75px;
 }
 
+/* Student Spotlight */
 .block{
     display:flex;
     flex-flow:row;
@@ -637,6 +638,8 @@ h4{
     margin:1em 200px 0 200px;
     padding-top:1em;
 }
+
+/* Contact Us */
 
 .contact-inside{
     display:flex;
@@ -677,6 +680,7 @@ h4{
     font-weight:300;
 }
 
+/* Icon for contact us */
 .fas{
     font-size:40px;
     padding-bottom:5px;
@@ -688,7 +692,7 @@ h4{
     font-family:"lora",serif;
     color:#282828;
 }
-
+/* Footer */
 .social-icons{
     width:30px;
     height:30px;
@@ -742,6 +746,8 @@ h4{
     display:none;
 }
 
+
+/* Start of media queries */
 /* center text and take out image when single column */
 @media (max-width:1250px){
     .col-1a{ 

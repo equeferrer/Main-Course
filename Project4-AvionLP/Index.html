@@ -16,33 +16,7 @@
 </head>
 
 <body>
-    
-    <header class="banner-main p5"> <a name="Home"></a>
-        <div class="container">          
-            <div class="row align-items-center justify-content-center">
-                <div class="column col-1a">
-                    <div class="main-banner">
-                        <h1>Become a <br>
-                            <span class="text_1">Software Engineer</span><span class="text_2">Web Developer</span><span class="text_3">Frontend Developer</span><span class="text_4">Backend Developer</span><span class="text_5">Product Manager</span> 
-                            <br><span class="weeks">in 12 weeks</span></h1>
-                        <h3>Pay only when you get hired!</h3>
-                        <p>Learn the fundamentals of writing code, how to build software,<br> work with teams, and apply for top software jobs.</p>
-                        <!-- <p>Learn the fundamentals of writing code and the skills of the best<br> software engineers. We teach you how to build software, work with<br>  teams and apply for top software jobs.</p>  &#10148;  -->
-                        <a class="typeform-share button btn-main" href="https://form.typeform.com/to/WSm7CCjb" data-mode="popup" target="_blank">Enroll Now</a> 
-                        <a class="button btn-main btn-2" href=#About> Learn More</a>
-                    </div>
-                </div>
-                <div class="column col-1b">
-                    <div class="banner-img">
-                        <img src="Assets/Images/1c.png" id="img-banner" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="shape-container">
-        <div class="shape"></div>
-    </div>
+    <!-- Navigation -->
     <nav id="top">
         <div id="nav-bar"> 
                 <a href=#Home><img src="Assets/Images/new-logo-white1.png" id="nav-logo" alt="Avion School"></a>
@@ -68,6 +42,36 @@
             </div>
         </div>
     </nav>
+    <!-- Hero Section -->
+    <header class="banner-main p5"> <a name="Home"></a>
+        <div class="container">          
+            <div class="row align-items-center justify-content-center">
+                <div class="column col-1a">
+                    <div class="main-banner">
+                        <h1>Become a <br>
+                            <span class="text_1">Software Engineer</span><span class="text_2">Web Developer</span><span class="text_3">Frontend Developer</span><span class="text_4">Backend Developer</span><span class="text_5">Product Manager</span> 
+                            <br><span class="weeks">in 12 weeks</span></h1>
+                        <h3>Pay only when you get hired!</h3>
+                        <p>Learn the fundamentals of writing code, how to build software,<br> work with teams, and apply for top software jobs.</p>
+                        <!-- <p>Learn the fundamentals of writing code and the skills of the best<br> software engineers. We teach you how to build software, work with<br>  teams and apply for top software jobs.</p>  &#10148;  -->
+                        <a class="typeform-share button btn-main" href="https://form.typeform.com/to/WSm7CCjb" data-mode="popup" target="_blank">Enroll Now</a> 
+                        <a class="button btn-main btn-2" href=#About> Learn More</a>
+                    </div>
+                </div>
+                <div class="column col-1b">
+                    <div class="banner-img">
+                        <img src="Assets/Images/1c.png" id="img-banner" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Shape -->
+    <div class="shape-container">
+        <div class="shape"></div>
+    </div>
+
+    <!-- About -->
     <section class="bg-gray"><a name="About"></a>
         <div class="container">
             <div class="grid">
@@ -112,6 +116,7 @@
         </div>
     </section>
 
+    <!-- Process -->
     <section class="bg-white"> <a name="Process"></a>
         <div class="container">
             <div> 
@@ -148,6 +153,7 @@
         </div>
     </section> 
 
+    <!-- Quote -->
     <section>
         <div class="quote-col">
             <h2 class="white-text quote text-align-center">"Investing in unparalleled software talents is at the heart of building a great tech ecosystem."</h2>
@@ -155,6 +161,7 @@
         </div>
     </section>  
 
+    <!-- Student Spotlight -->
     <section class="bg-white">
         <div class="container">
             <div class="testimonials"> 
@@ -185,6 +192,7 @@
         </div>
     </section> 
 
+    <!-- Contact -->
     <section class="bg-white"> <a name="Contact"></a>
         <div class="container">
             <div> 
@@ -218,6 +226,7 @@
         </div>
     </section> 
 
+    <!-- Call to Action -->
     <section class="bg-gray"> 
         <div class="container cta-row">
             <div class="text-align-center p-bot">
@@ -269,4 +278,19 @@
                 q.parentNode.insertBefore(js,q) } })() 
     </script>
 
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "1771270859783712", // Facebook page ID
+                call_to_action: "Message us", // Call to action
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
 </body>

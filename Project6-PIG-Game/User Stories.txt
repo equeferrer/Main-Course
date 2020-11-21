@@ -9,8 +9,8 @@ USER STORIES: PIG GAME
 *7. As a user, I want to see my current score added to my total score when I click on HOLD
 8. As a user, I want to see whose turn it is by showing who is "Active"
 9. As a user, I want to see to switch the "Active" player when: 
-	8a. one of the players gets a dice of 1, OR
-	8b. one of the players clicks on HOLD
+	9a. one of the players gets a dice of 1, OR
+	9b. one of the players clicks on HOLD
 10. As a user, I want to see the WINNER when a player reaches the total score (current + total score combined)
 *11. As a user, I want all the scores to go back to 0 when I click on NEW GAME
 

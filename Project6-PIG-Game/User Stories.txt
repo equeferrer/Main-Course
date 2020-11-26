@@ -1,27 +1,28 @@
 USER STORIES: PIG GAME
 
-1. As a user, I want to see the scores as 0 when I open the game
-2. As a user, I dont want to see the dice at the beginning of the game
-*3. As a user, I want to see a randomized dice image appear when I click ROLL DICE
-*4. As a user, I want to see the number in the said dice to appear as my current score
-*5. As a user, I want my current score to be updated when I click ROLL DICE again (combine 4,5?)
-6. As a user, I want my current score to go to 0 if the dice rolls EXACTLY 1
-*7. As a user, I want to see my current score added to my total score when I click on HOLD
-8. As a user, I want to see whose turn it is by showing who is "Active"
-9. As a user, I want to see to switch the "Active" player when: 
-	9a. one of the players gets a dice of 1, OR
-	9b. one of the players clicks on HOLD
-10. As a user, I want to see the WINNER when a player reaches the total score (current + total score combined)
-*11. As a user, I want all the scores to go back to 0 when I click on NEW GAME
+/ 1. As a user, I want to see the scores as 0 when I open the game
+/ 2. As a user, I dont want to see the dice at the beginning of the game (changed opacity instead)
+/ *3. As a user, I want to see a randomized dice image appear when I click ROLL DICE
+/ *4. As a user, I want to see the number in the said dice to appear as my current score
+/ *5. As a user, I want my current score to be updated when I click ROLL DICE again (combine 4,5?)
+/ 6. As a user, I want my current score to go to 0 if the dice rolls EXACTLY 1
+/ *7. As a user, I want to see my current score added to my total score when I click on HOLD
+/! 8. As a user, I want to see whose turn it is by showing who is "Active"
+/! 9. As a user, I want to see to switch the "Active" player when: 
+/	9a. one of the players gets a dice of 1, OR
+/ 	9b. one of the players clicks on HOLD
+/! 10. As a user, I want to see the WINNER when a player reaches the total score (current + total score combined)
+/ *11. As a user, I want all the scores to go back to 0 when I click on NEW GAME
 
 
 Additional:
-12. As a user, I want to be able to add my name in place of Player 1/Player 2 
-13. As a user, I want to be able to add how many dices are seen
-14. As a user, I want to be able to input the total score needed to win 
-15. Show "1" dice but different color, prompt it's next player's turn
-16. Roll Dice Animation? Change Opacity, Add Sounds
-17. Underline name of player? 	
+*12. As a user, I want to be able to add my name in place of Player 1/Player 2 (FORMS or editable)
+*13. As a user, I want to be able to add how many dices are seen (1 or 2!)
+*14. As a user, I want to be able to input the total score needed to win 
+/ 15. Show "1" dice but different color, prompt it's next player's turn
+/ 16. Roll Dice Animation? Change Opacity, Add Sounds
 
-** Be able to note if current score and total score = need score, not just total score
-
+X **create a test for debugging?
+/ ** if there is a winner already, cannot press roll dice or Hold!!
+** put a mute/unmute button in settings?
+** Finalize animation for winners? 

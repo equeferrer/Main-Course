@@ -29,12 +29,67 @@
             </div>
             
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-settings"><i class="ion-ios-settings"></i>Settings</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="btn-rules"><i class="ion-ios-compose-outline icon color-0"></i>Rules</button>
+            
             
             <div class="dice-panel">
                 <img src="Assets/dice-5.png" alt="Dice 1" class="dice" id="dice-0">
                 <img src="Assets/dice-5.png" alt="Dice 2" class="dice" id="dice-1">
+            </div>
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                    <a class="popup-close" href="#">×</a>
+                    <h3>Settings</h3>
+                    <form class="form">
+                        <div class="form-questions">
+                            <label class="form-label">Player 1 name :</label>
+                            <input type="text" name="player-1-name" id="player-1-name" class="form-input player-input" value="Player 1">
+                        </div>
+
+                        <div class="form-questions">
+                            <label class="form-label">Player 2 name :</label>
+                            <input type="text" name="player-2-name" id="player-2-name" class="form-input player-input" value="Player 2">
+                        </div>
+
+                        <div class="form-questions">
+                            <label class="form-label">Set winning score :</label>
+                            <input type="number" pattern="[0-9]{9}" name="win-score" id="win-score" class="form-input" value="100" required>
+                        </div>
+
+                        <div class="form-questions">
+                            <label class="form-label">Number of dice :</label>
+                            <div class="form-radio-group">  
+                                <input type="radio" class="form-radio-input" id="oneDice" value="" name="numberDice" active> 
+                                <label class="diceImg one-dice-img" for="oneDice"></label>    
+                                <input type="radio" class="form-radio-input twoDice" checked="checked" id="twoDice" value="" class="input-radio" name="numberDice">
+                                <label class="diceImg two-dice-img" for="twoDice"></label>    
+                            </div>
+                        </div>
+                        <div class="form-questions get-started">
+                            <label class="form-label"></label>
+                            <input type="button" name="set" id="set-btn" class="btn-play" value="Get Started">
+                        </div>
+                    </form>
+            </div>
+        </div>
+
+        <div class="popup" id="instructions">
+            <div class="popup-content">
+                    <a id="close-guide" class="popup-close" href="#">×</a>
+                    <h3>Instructions</h3>
+                    <br>
+                    <ul> 
+                        <li>The game has 2 players, playing in rounds. </li>
+                        <li>In each turn, a player rolls a dice (or two) as many times as he wishes. Each result get added to his ROUND score. </li>
+                        <li>If the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn. </li>
+                        <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn. </li>
+                        <li>The first player to reach 100 points (set by default) or chosen winning score on GLOBAL score wins the game. </li>
+                    </ul>
             </div>
         </div>
         

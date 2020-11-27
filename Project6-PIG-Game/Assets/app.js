@@ -6,6 +6,10 @@
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game */ 
 
+setTimeout(function(){ 
+	document.querySelector("#instructions").style.display = "block";
+ }, 1000);
+
 const player0 = {
     name: document.querySelector('#name-0'),
     panel: document.querySelector('.player-0-panel'),
@@ -33,8 +37,6 @@ player0.totalScore.innerText = "0";
 player1.totalScore.innerText = "0";
 dice.One.style.opacity = "0.5";
 dice.Two.style.opacity = "0.5";
-// dice.Two.style.display = "none";
-// random1 = 0;
 
 class Game {
     constructor(player0, player1) {
@@ -47,8 +49,8 @@ class Game {
         player1.currentScore.innerText = "0";
         player0.totalScore.innerText = "0";
         player1.totalScore.innerText = "0";
-        player0.name.innerText = "PLAYER 1";
-        player1.name.innerText = player1.name.innerText;
+        player0.name.innerText = document.querySelector("#player-1-name").value;
+        player1.name.innerText = document.querySelector("#player-2-name").value;
 
         // Reset Active class
         player0.panel.classList.add("active");
@@ -80,20 +82,20 @@ class Game {
         document.querySelector(".btn-hold").style.display = "none";
     }
     winner(){
-        if (player0.totalScore.innerText >= 100){ 
-            alert("Hello!");
+        let input = document.querySelector("#win-score").value;
+
+        if (player0.totalScore.innerText >= parseFloat(input)){ 
             player0.panel.classList.add("winner");
-            document.querySelector('#name-0').innerHTML = "WINNER!";
+            document.querySelector('#name-0').innerHTML = "WINNER!<br>" + player0.name.innerText;
             game.hideHold();
             game.hideRoll();
-            player1.panel.classList.remove("active");
-        } else if (player1.totalScore.innerText >= 100) {
-            alert("howdy!");
+            alert(player0.name.innerText + " Wins!");
+        } else if (player1.totalScore.innerText >= parseFloat(input)) {
             player1.panel.classList.add("winner");
-            document.querySelector('#name-1').innerHTML = "WINNER!";
+            document.querySelector('#name-1').innerHTML = "WINNER!<br>" + player1.name.innerText;
             game.hideHold();
             game.hideRoll();
-            player0.panel.classList.remove("active");
+            alert(player1.name.innerText + " Wins!");
         }
     }
     soundRoll(){
@@ -124,20 +126,37 @@ class Game {
 
 const game = new Game(player0, player1);
 
-document.querySelector('.btn-new').onclick = function() { 
+document.querySelector('.btn-new').addEventListener('click', function() { 
     game.reset();
     game.showRoll();
     game.showHold();
-}
+});
 
-document.querySelector('.btn-roll').onclick = function() {
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
     let min = 1;
     let max = 6;
     let random0 = Math.floor(Math.random() * (max - min + 1)) + min;
     let random1 = Math.floor(Math.random() * (max - min + 1)) + min;
     let sum = random0 + random1;
-    console.log(random0);
-    console.log(random1);
+
+    let twoDice = document.querySelector("#twoDice").checked;
+    if (twoDice == true){
+        sum = random0 + random1
+        dice.Two.style.display = "block";
+        document.querySelector("#dice-0").src = "Assets/dice-" + random0 + ".png";
+        document.querySelector("#dice-1").src = "Assets/dice-" + random1 + ".png";
+        document.querySelector("#dice-0").style.margin = "0 0 0 0";
+    } else {
+        sum = random0;
+        dice.Two.style.display = "none";
+        random1 = 0;
+        document.querySelector("#dice-0").src = "Assets/dice-" + random0 + ".png";
+        document.querySelector("#dice-1").src = "";
+        document.querySelector("#dice-0").style.margin = "50px 0 0 0";
+    }
+    
+    console.log('%c ROLL DICE', 'color:green; font-weight: bold', {twoDice, random0, random1});
     // switching player scores based on who has active class
     if (player0.panel.classList.contains('active')){
         current = player0.currentScore;
@@ -146,6 +165,7 @@ document.querySelector('.btn-roll').onclick = function() {
         current = player1.currentScore;
         total = player1.totalScore;
     }
+
     // if at least 1 dice rolls 1, switchActive + return 0; else, add to current
     if (random0 === 1 || random1 === 1) {
         current.innerText = 0;
@@ -155,24 +175,50 @@ document.querySelector('.btn-roll').onclick = function() {
         current.innerText = parseInt(current.innerText) + sum;
         game.soundRoll();
     }
-    // change image of dice
-    document.querySelector("#dice-0").src = "Assets/dice-" + random0 + ".png";
-    document.querySelector("#dice-1").src = "Assets/dice-" + random1 + ".png";
-    // change style of dice if === 1
+
+    // change image and style of dice
     game.styleDice(random0,dice.One);
     game.styleDice(random1,dice.Two); 
+
     // rotate dice, remove class after to allow for next spins
     game.rotateDice(dice.One);
     game.rotateDice(dice.Two);
     setTimeout(function () { dice.One.classList.remove("spin") }, 500);
     setTimeout(function () { dice.Two.classList.remove("spin") }, 500);
-}
+});
 
-document.querySelector('.btn-hold').onclick = function () {
+document.querySelector('.btn-hold').addEventListener('click', function() {
     // add current score to totals, reset current to 0
     total.innerText = parseInt(total.innerText) + parseInt(current.innerText);  
     current.innerText = "0"; 
     game.switchActive();
     game.soundHold();
     game.winner();
-}
+});
+
+
+// Event Listeners for Pop-ups //
+document.querySelector('.btn-settings').addEventListener('click', function() {
+	document.querySelector('#popup').style.display = 'block';
+})
+
+document.querySelector('#set-btn').addEventListener('click', function() {
+	game.reset();
+    game.showHold();
+    game.showRoll();
+    document.querySelector('#popup').style.display = 'none';
+    player0.name.innerText = document.querySelector("#player-1-name").value;
+    player1.name.innerText = document.querySelector("#player-2-name").value;
+});
+
+document.querySelector('.popup-close').addEventListener('click', function() {
+	document.querySelector('#popup').style.display = 'none';
+})
+
+document.querySelector('#close-guide').addEventListener('click', function() {
+	document.querySelector("#instructions").style.display = 'none';
+})
+
+document.querySelector('.btn-rules').addEventListener('click', function() {
+	document.querySelector("#instructions").style.display = "block";
+})

@@ -142,7 +142,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
     let twoDice = document.querySelector("#twoDice").checked;
     if (twoDice == true){
-        sum = random0 + random1
+        // sum = random0 + random1
         dice.Two.style.display = "block";
         document.querySelector("#dice-0").src = "Assets/dice-" + random0 + ".png";
         document.querySelector("#dice-1").src = "Assets/dice-" + random1 + ".png";
@@ -209,6 +209,7 @@ document.querySelector('#set-btn').addEventListener('click', function() {
     document.querySelector('#popup').style.display = 'none';
     player0.name.innerText = document.querySelector("#player-1-name").value;
     player1.name.innerText = document.querySelector("#player-2-name").value;
+    document.querySelector(".btn-flag").innerHTML = "<i class='ion-ios-flag'></i> Race to " + document.querySelector("#win-score").value
 });
 
 document.querySelector('.popup-close').addEventListener('click', function() {

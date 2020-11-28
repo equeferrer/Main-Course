@@ -137,16 +137,17 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 95px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
-.btn-settings { top: 45px; }
-.btn-rules { top: 530px; }
+.btn-new { top: 130px;}
+.btn-roll { top: 423px;}
+.btn-hold { top: 477px;}
+.btn-settings { top: 80px; }
+.btn-rules { top: 30px;}
+.btn-flag { top: 560px; font-weight: 600;}
 .dice {
     position: absolute;
     left: 45%; /* was 50% */
     /* top: 178px; */
-    top: 150px;
+    top: 180px;
     /* transform: translateX(-50%); */
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);

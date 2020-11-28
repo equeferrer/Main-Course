@@ -61,13 +61,8 @@ class Game {
         player1.panel.classList.remove("winner");
     }        
     switchActive(){ 
-        if (player0.panel.classList.contains('active')){
-            player0.panel.classList.remove("active");
-            player1.panel.classList.add("active");
-        } else if (player1.panel.classList.contains('active')) {
-            player0.panel.classList.add("active");
-            player1.panel.classList.remove("active");
-        }
+        player0.panel.classList.toggle("active");
+        player1.panel.classList.toggle("active");
     }
     hideRoll() {
         document.querySelector(".btn-roll").style.display = "none";
@@ -83,7 +78,6 @@ class Game {
     }
     winner(){
         let input = document.querySelector("#win-score").value;
-
         if (player0.totalScore.innerText >= parseFloat(input)){ 
             player0.panel.classList.add("winner");
             document.querySelector('#name-0').innerHTML = "WINNER!<br>" + player0.name.innerText;
@@ -142,7 +136,6 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
     let twoDice = document.querySelector("#twoDice").checked;
     if (twoDice == true){
-        // sum = random0 + random1
         dice.Two.style.display = "block";
         document.querySelector("#dice-0").src = "Assets/dice-" + random0 + ".png";
         document.querySelector("#dice-1").src = "Assets/dice-" + random1 + ".png";

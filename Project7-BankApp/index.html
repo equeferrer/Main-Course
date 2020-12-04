@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExBanking App</title>
+    <link href="style.css" type="text/CSS" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">Banking App</h1> <hr>
+<!-- VISIBLE FOR NON LOGGED IN STATUS -->
+    
+    <div class="container ">
+        <div class="navigation">
+            <ul>
+                <li><a id="about-tab" class="active" href="#">About</a></li>
+                <li><a id="register-tab" href="#">Register</a></li>
+                <li><a id="login-tab" href="#">Log-In</a></li>
+            </ul>
+        </div>
+        <div class="one">
+            <div class="about">
+                <h3>What you can do with this banking app:</h3> <br>
+                <ul>            
+                    <li>Deposit money</li>
+                    <li>Withdraw money</li>
+                    <li>Send money to other users</li>
+                </ul> <br>
+                <p>**Please note that values will not be retained when the page is refreshed.**</p>
+            </div>
+        </div>
+        <form class="one register hidden">
+            <fieldset>
+                <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="username" id="username-label" class="survey-label">Username:</label>
+                        <input type="username" name="username" id="username" class="input" required>
+                    </li>
+                    <li class="">   
+                        <label for="height" id="height-label" class="survey-label">Password:</label>
+                        <input type="password" name="password" id="password" class="input" required>
+                    </li>
+                    <li class="">   
+                        <label for="height" id="height-label" class="survey-label">Confirm password:</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="input" required>
+                    </li>
+                </ul>            
+                <div id="reg" class="button">
+                    <input type="button" id="reg-btn" value="Register Now">
+                </div>
+            </fieldset>
+        </form>
+        <form class="one login hidden">
+            <fieldset>
+                <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="username" id="username-label" class="survey-label">Username:</label>
+                        <input type="username" name="username2" id="username2" class="input" required>
+                    </li>
+                    <li class="">   
+                        <label for="height" id="height-label" class="survey-label">Password:</label>
+                        <input type="password" name="password2" id="password2" class="input" required>
+                    </li>
+                </ul>            
+                <div class="button">
+                    <input type="button" id="login-btn" value="Log-in">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!-- Add Log-In button/link also -->
+
+<!-- VISIBLE FOR LOGGED IN STATUS -->
+    <div class="container-two hidden">
+        <div class="navigation nav-two">
+            <ul>
+                <li><a id="home-tab" class="active" href="#">Home</a></li>
+                <li><a id="deposit-tab" href="#">Deposit</a></li>
+                <li><a id="withdraw-tab" href="#">Withdraw</a></li>
+                <li><a id="send-tab" href="#">Send Money</a></li>
+                <li><a id="profile-tab" href="#">Profile</a></li>
+                <li><button id="logout-btn"  href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="two home">
+            <h3>Welcome <span id="logged-user">a</span>!</h3> <br> <br>
+            <h4>What you can do with this banking app:</h4> <br>
+            <ul>            
+                <li>Deposit money</li>
+                <li>Withdraw money</li>
+                <li>Send money to other users</li>
+            </ul> <br>
+            <p>**Please note that values will not be retained when the page is refreshed.**</p>
+        </div>
+        <!-- <div>
+            <input type="button" id="logout-btn" value="Log-out">
+        </div> -->
+        <form class="two deposit hidden">
+            <fieldset>
+                <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="deposit-amount" id="deposit-label" class="survey-label">Amount:</label>
+                        <!-- min=0.01 max=10000000 -->
+                        <input type="number" name="deposit-amount" id="deposit-amount" class="input" required>
+                    </li>
+                </ul>            
+                <div class="button">
+                    <input type="button" id="deposit-btn" value="Deposit">
+                </div>
+            </fieldset>
+        </form>
+        <form class="two withdraw hidden">
+            <fieldset>
+                <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="withdraw-amount" id="withdraw-label" class="survey-label">Amount:</label>
+                        <input type="number" name="withdraw-amount" id="withdraw-amount" class="input" required>
+                    </li>
+                </ul>            
+                <div class="button">
+                    <input type="button" id="withdraw-btn" value="Withdraw">
+                </div>
+            </fieldset>
+        </form>
+        <form class="two send hidden">
+            <fieldset>
+                <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="receiver" id="receive-label" class="survey-label">Send To:</label>
+                        <input type="username" name="receiver" id="receiver" class="input" required>
+                    </li>
+                    <li class="">   
+                        <label for="send-amount" id="send-label" class="survey-label">Amount:</label>
+                        <input type="number" name="send-amount" id="send-amount" class="input" required>
+                    </li>
+                </ul>            
+                <div class="button">
+                    <input type="button" id="send-btn" value="Send Money">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- <div class="alert">
+        <span class="close-btn" onclick="this.parentsElemenet.style.display='none';">&times;</span>
+        This is an alert box.
+    </div> -->
+
+
+
+    <script src="app.js" type="text/javascript"></script>
+    <!-- <footer></footer> -->
+</body>
+</html>

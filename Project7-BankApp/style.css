@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Montserrat";
+}
+
+body {
+  height: 93.3vh;
+  width: 100%;
+}
+
+body{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: white;
+}
+form {
+    display:flex;
+    justify-content: center;
+    /* padding: 10px; */
+}
+
+form li{
+    margin:10px;
+}
+
+/* take out maybe */
+fieldset{
+    border:0 none;
+    /* background-color: rgba(189,189,189,0.1);
+    color:white; */
+}
+
+.survey-label { 
+    display:inline-block;
+    width: 10rem; 
+}
+
+input[type=button] {
+    border:0 none;
+    font:2.4em;
+    padding:5px;
+    border-radius:5px;
+    /* font-size:70%; */
+    cursor:pointer;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+input[type=button]:hover {
+    border:1px solid white;
+    background-color:rgba(0,0,0,0.3);
+    color:white;
+    margin-bottom:-2px;
+}
+
+.button{
+    padding-top: 1em;
+    display: flex;
+    justify-content:center;
+}
+
+#reg{
+    padding-top: 1em;
+    display: flex;
+}
+
+/* #confirmPassword{
+    margin-top:1em;
+} */
+
+.one{
+    display:flex;
+    justify-content: center;
+}
+
+.about, .register, .login{
+    padding-top:75px;
+    display: flex;
+}
+
+.title{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+hr{
+    margin: 30px;
+}
+
+.container{
+    background-color: rgba(189, 189, 189, 0.306);
+    border:1px solid black;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    border-radius:30px;
+    width:35%;
+    /* height:300px; */
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.navigation{
+    width:100%;
+    position: relative;
+}
+
+.navigation ul{
+    width:100%;
+    position:absolute;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items:center;    
+    margin-bottom:1.5em;
+}
+
+
+
+.active{
+    color:black !important;
+}
+
+.navigation li{
+    position:relative;
+    list-style-type:none;
+    margin:1em;
+}
+
+.navigation a{
+    color:white;
+}
+
+.about{
+    display:block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.about ul{
+    padding-left: 30px;
+}
+
+.container-two{
+    background-color: rgba(189, 189, 189, 0.306);
+    border:1px solid black;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    border-radius:30px;
+    width:65%;
+    height:300px;
+    display:flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.withdraw, .deposit, .send{
+    padding-top:100px;
+    display:flex;
+}
+
+.home{
+    display:block;
+    padding-top:100px;
+}
+
+.home ul{
+    padding-left: 30px;
+}
+
+/* Alerts */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 300px;
+    margin-right:300px;
+    text-align: center;
+}
+  
+  /* The close button */
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  /* When moving the mouse over the close button */
+.close-btn:hover {
+    color: black;
+}
+
+.hidden{
+    display:none !important;
+}
+
+#logout-btn{
+    border:1px solid white;
+    background-color:rgba(0,0,0,0.3) !important;
+    color:white;
+    margin-bottom:-2px;
+}
+
+
+@media (max-width:1250px){
+    .container{ 
+        width: 45%;
+    }
+}

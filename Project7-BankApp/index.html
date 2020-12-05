@@ -10,7 +10,7 @@
     <h1 class="title">Banking App</h1> <hr>
 <!-- VISIBLE FOR NON LOGGED IN STATUS -->
     
-    <div class="container ">
+    <div class="container">
         <div class="navigation">
             <ul>
                 <li><a id="about-tab" class="active" href="#">About</a></li>
@@ -29,28 +29,31 @@
                 <p>**Please note that values will not be retained when the page is refreshed.**</p>
             </div>
         </div>
-        <form class="one register hidden">
+        <form id="register-form" class="one register hidden">
             <fieldset>
                 <ul style="list-style-type:none">
+                    <li class="">   
+                        <label for="name" id="name-label" class="survey-label">Full Name:</label>
+                        <input type="name" name="name" id="name" class="input" required>
+                    </li>
                     <li class="">   
                         <label for="username" id="username-label" class="survey-label">Username:</label>
                         <input type="username" name="username" id="username" class="input" required>
                     </li>
                     <li class="">   
                         <label for="height" id="height-label" class="survey-label">Password:</label>
-                        <input type="password" name="password" id="password" class="input" required>
+                        <input type="password" name="password" id="password" class="input"  required>
+                        <!-- minlength="8" -->
                     </li>
                     <li class="">   
                         <label for="height" id="height-label" class="survey-label">Confirm password:</label>
                         <input type="password" name="confirmPassword" id="confirmPassword" class="input" required>
                     </li>
                 </ul>            
-                <div id="reg" class="button">
-                    <input type="button" id="reg-btn" value="Register Now">
-                </div>
+                <input type="submit" id="reg-btn" value="Register Now"></input>
             </fieldset>
         </form>
-        <form class="one login hidden">
+        <form id="login-form" class="one login hidden">
             <fieldset>
                 <ul style="list-style-type:none">
                     <li class="">   
@@ -62,9 +65,9 @@
                         <input type="password" name="password2" id="password2" class="input" required>
                     </li>
                 </ul>            
-                <div class="button">
-                    <input type="button" id="login-btn" value="Log-in">
-                </div>
+                <!-- <div class="button"> -->
+                <input type="submit" id="login-btn" value="Log-in">
+                <!-- </div> -->
             </fieldset>
         </form>
     </div>
@@ -91,38 +94,39 @@
                 <li>Send money to other users</li>
             </ul> <br>
             <p>**Please note that values will not be retained when the page is refreshed.**</p>
+            <p>Current Balance: ₱<span id="get-balance-2"></span></h3></p>
         </div>
         <!-- <div>
             <input type="button" id="logout-btn" value="Log-out">
         </div> -->
-        <form class="two deposit hidden">
+        <form id="deposit-form" class="two deposit hidden">
             <fieldset>
                 <ul style="list-style-type:none">
                     <li class="">   
                         <label for="deposit-amount" id="deposit-label" class="survey-label">Amount:</label>
-                        <!-- min=0.01 max=10000000 -->
-                        <input type="number" name="deposit-amount" id="deposit-amount" class="input" required>
+                        <!-- max=10000000 -->
+                        <input type="number" name="deposit-amount" id="deposit-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <div class="button">
-                    <input type="button" id="deposit-btn" value="Deposit">
-                </div>
+                <!-- <div class="button"> -->
+                <input type="submit" id="deposit-btn" value="Deposit">
+                <!-- </div> -->
             </fieldset>
         </form>
-        <form class="two withdraw hidden">
+        <form id="withdraw-form"class="two withdraw hidden">
             <fieldset>
                 <ul style="list-style-type:none">
                     <li class="">   
                         <label for="withdraw-amount" id="withdraw-label" class="survey-label">Amount:</label>
-                        <input type="number" name="withdraw-amount" id="withdraw-amount" class="input" required>
+                        <input type="number" name="withdraw-amount" id="withdraw-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <div class="button">
-                    <input type="button" id="withdraw-btn" value="Withdraw">
-                </div>
+                <!-- <div class="button"> -->
+                <input type="submit" id="withdraw-btn" value="Withdraw">
+                <!-- </div> -->
             </fieldset>
         </form>
-        <form class="two send hidden">
+        <form id="send-form" class="two send hidden">
             <fieldset>
                 <ul style="list-style-type:none">
                     <li class="">   
@@ -131,14 +135,35 @@
                     </li>
                     <li class="">   
                         <label for="send-amount" id="send-label" class="survey-label">Amount:</label>
-                        <input type="number" name="send-amount" id="send-amount" class="input" required>
+                        <input type="number" name="send-amount" id="send-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <div class="button">
-                    <input type="button" id="send-btn" value="Send Money">
-                </div>
+                <!-- <div class="button"> -->
+                <input type="submit" id="send-btn" value="Send Money">
+                <!-- </div> -->
             </fieldset>
         </form>
+        <div class="two profile hidden">
+            <div class="profile-box">
+                <div class="img">
+                    <img src="" id="avatar">
+                </div>
+                <div>
+                    <h3><span id="get-name">Name</span></h3>
+                    <h4><span id="get-user">Username</span></h4><br>
+                    <h2>Balance: <span id="get-balance"></span></h2>
+                </div>
+            </div>
+            <div>
+                <a href="#" id="change-name-btn">Change Name</a>
+                <a href="#" id="change-username-btn">Change Username</a>
+                <!-- <a href="#" id="change-pic-btn">Upload Picture</a> -->
+                <!-- <input type='file' id="readUrl" multiple="false" accept="image/*" onchange="upload()">  -->
+                <form id="pictureForm">
+                    <input type='file' value="Upload Picture" />
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- <div class="alert">

@@ -10,7 +10,7 @@ body {
 }
 
 body{
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: linear-gradient(to right bottom, #083956, #0a3e5d, #0c4363, #0e486a, #104d71, #13597c, #186587, #1e7292, #3089a1, #47a1af, #62b9bb, #80d0c7);
     color: white;
 }
 form {
@@ -33,6 +33,17 @@ fieldset{
 .survey-label { 
     display:inline-block;
     width: 10rem; 
+}
+
+button{
+    border:0 none;
+    font:2.4em;
+    padding:5px;
+    border-radius:5px;
+    /* font-size:70%; */
+    cursor:pointer;
+    padding-left:15px;
+    padding-right:15px;
 }
 
 input[type=button] {
@@ -214,9 +225,25 @@ hr{
     margin-bottom:-2px;
 }
 
+.profile-box{
+    display:flex;
+    margin-top: 90px;
+}
+
+.profile-box img{
+    width:100px;
+    height: 100px;
+    padding-right:1.5em;
+    border-radius:49%;
+}
+
+#get-user{
+    color:#C0C0C0;
+}
 
 @media (max-width:1250px){
     .container{ 
         width: 45%;
     }
 }
+

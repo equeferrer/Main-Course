@@ -4,85 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExBanking App</title>
-    <link href="style.css" type="text/CSS" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="style-copy.css" type="text/CSS" rel="stylesheet">
 </head>
 <body>
-    <h1 class="title">Banking App</h1> <hr>
-<!-- VISIBLE FOR NON LOGGED IN STATUS -->
-    
-    <div class="container">
-        <div class="navigation">
-            <ul>
-                <li><a id="about-tab" class="active" href="#">About</a></li>
-                <li><a id="register-tab" href="#">Register</a></li>
-                <li><a id="login-tab" href="#">Log-In</a></li>
-            </ul>
+<!-- VISIBLE FOR NON LOGGED IN STATUS -->   
+    <!-- <h2 id="header">ExBanking App</h2> <br> -->
+    <div class="container" id="container-one">
+        <div class="form-container sign-up-container">           
+            <form id="register-form" class="form one register">
+                <h1>Create Account</h1> <br>
+                <ul style="list-style-type:none">
+                        <li class="">   
+                            <label for="name" id="name-label" class="survey-label">Full Name:</label>
+                            <input type="text" name="name" id="name" class="input" autocapitalize="words" required>
+                        </li>
+                        <li class="">   
+                            <label for="username" id="username-label" class="survey-label">Username:</label>
+                            <input type="username" name="username" id="username" class="input" oninput="this.value = this.value.toLowerCase()" required>
+                        </li>
+                        <li class="">   
+                            <label for="height" id="height-label" class="survey-label">Password:</label>
+                            <input type="password" name="password" id="password" class="input" required>
+                            <!-- minlength="8" -->
+                        </li>
+                        <li class="">   
+                            <label for="height" id="height-label" class="survey-label">Confirm password:</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" class="input" required>
+                        </li>
+                    </ul>            
+                <input type="submit" class="submit-btn" id="reg-btn" value="Sign Up"></input>
+            </form>
         </div>
-        <div class="one">
-            <div class="about">
-                <h3>What you can do with this banking app:</h3> <br>
-                <ul>            
-                    <li>Deposit money</li>
-                    <li>Withdraw money</li>
-                    <li>Send money to other users</li>
-                </ul> <br>
-                <p>**Please note that values will not be retained when the page is refreshed.**</p>
+        <div class="form-container sign-in-container">
+            <form id="login-form" class="form one login">
+                <h1 id="sign-in-header">Sign in</h1> <br>               
+                    <ul style="list-style-type:none">
+                        <li class="">   
+                            <label for="username2" id="username2-label" class="survey-label">Username:</label>
+                            <input type="text" name="username2" id="username2" class="input" oninput="this.value = this.value.toLowerCase()" required>
+                        </li>
+                        <li class="">   
+                            <label for="height" id="height-label" class="survey-label">Password:</label>
+                            <input type="password" name="password2" id="password2" class="input" required>
+                        </li>
+                    </ul>            
+                    <a href="#" id="forgot-password">Forgot your password?</a>
+                    <input type="submit" class="submit-btn" id="login-btn" value="Sign In">
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello there!</h1> <br>
+                    <div class="about">
+                        <p><b>What you can do with this bank app:</b></p>
+                        <ul><li>Deposit money</li>
+                            <li>Withdraw money</li>
+                            <li>Send money to other users</li>
+                        </ul>
+                        <p>Please note that values will not be retained when the page is refreshed</p>
+                    </div>
+                    <p class="cta-description">Already have an account?</p>
+                    <button class="light button" id="login-tab">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <div class="logo">
+                        <h3><i class="fas fa-university"></i> ExBanking App</h3> <br><br>
+                    </div>
+                    <h1>Welcome Back!</h1><br> <br>
+                    <p class="cta-description">Don't have an account yet?</p>  
+                    <button class="light button" id="register-tab">Sign Up</button><br> <br>
+
+                </div>
             </div>
         </div>
-        <form id="register-form" class="one register hidden">
-            <fieldset>
-                <ul style="list-style-type:none">
-                    <li class="">   
-                        <label for="name" id="name-label" class="survey-label">Full Name:</label>
-                        <input type="name" name="name" id="name" class="input" required>
-                    </li>
-                    <li class="">   
-                        <label for="username" id="username-label" class="survey-label">Username:</label>
-                        <input type="username" name="username" id="username" class="input" required>
-                    </li>
-                    <li class="">   
-                        <label for="height" id="height-label" class="survey-label">Password:</label>
-                        <input type="password" name="password" id="password" class="input"  required>
-                        <!-- minlength="8" -->
-                    </li>
-                    <li class="">   
-                        <label for="height" id="height-label" class="survey-label">Confirm password:</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" class="input" required>
-                    </li>
-                </ul>            
-                <input type="submit" id="reg-btn" value="Register Now"></input>
-            </fieldset>
-        </form>
-        <form id="login-form" class="one login hidden">
-            <fieldset>
-                <ul style="list-style-type:none">
-                    <li class="">   
-                        <label for="username" id="username-label" class="survey-label">Username:</label>
-                        <input type="username" name="username2" id="username2" class="input" required>
-                    </li>
-                    <li class="">   
-                        <label for="height" id="height-label" class="survey-label">Password:</label>
-                        <input type="password" name="password2" id="password2" class="input" required>
-                    </li>
-                </ul>            
-                <!-- <div class="button"> -->
-                <input type="submit" id="login-btn" value="Log-in">
-                <!-- </div> -->
-            </fieldset>
-        </form>
     </div>
-    <!-- Add Log-In button/link also -->
 
 <!-- VISIBLE FOR LOGGED IN STATUS -->
     <div class="container-two hidden">
         <div class="navigation nav-two">
-            <ul>
-                <li><a id="home-tab" class="active" href="#">Home</a></li>
-                <li><a id="deposit-tab" href="#">Deposit</a></li>
-                <li><a id="withdraw-tab" href="#">Withdraw</a></li>
-                <li><a id="send-tab" href="#">Send Money</a></li>
-                <li><a id="profile-tab" href="#">Profile</a></li>
-                <li><button id="logout-btn"  href="#">Logout</a></li>
+            <ul style="list-style: none;">
+                <div class="logo">
+                    <i class="fas fa-university"></i> ExBanking App
+                </div>
+                <div id="home-tab-bg">
+                    <li><a id="home-tab" class="active" href="#">Home</a></li>
+                </div>
+                <div id="deposit-tab-bg">
+                    <li><a id="deposit-tab" href="#">Deposit</a></li>
+                </div>
+                <div id="withdraw-tab-bg">
+                    <li><a id="withdraw-tab" href="#">Withdraw</a></li>
+                </div>
+                <div id="send-tab-bg">
+                    <li><a id="send-tab" href="#">Send</a></li>
+                </div>
+                <div id="profile-tab-bg">                
+                    <li><a id="profile-tab" href="#">Profile</a></li>
+                </div>
+                <div>
+                    <li><button id="logout-btn" class="button" href="#">Logout</a></li>
+                </div>
             </ul>
         </div>
         <div class="two home">
@@ -93,85 +116,81 @@
                 <li>Withdraw money</li>
                 <li>Send money to other users</li>
             </ul> <br>
-            <p>**Please note that values will not be retained when the page is refreshed.**</p>
-            <p>Current Balance: ₱<span id="get-balance-2"></span></h3></p>
+            <p><i>Please note that values will not be retained when the page is refreshed.</i></p> <br> <br>
+            <div class="display-bal">
+                <h4>Current Balance: </h4><h1><span id="get-balance-2"></span></h1></p>
+            </div>
         </div>
-        <!-- <div>
-            <input type="button" id="logout-btn" value="Log-out">
-        </div> -->
-        <form id="deposit-form" class="two deposit hidden">
-            <fieldset>
+        <form id="deposit-form" class="form two deposit hidden">
+            <div>
                 <ul style="list-style-type:none">
                     <li class="">   
                         <label for="deposit-amount" id="deposit-label" class="survey-label">Amount:</label>
-                        <!-- max=10000000 -->
-                        <input type="number" name="deposit-amount" id="deposit-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
+                        <input type="number" name="deposit-amount" id="deposit-amount" class="input" min="0.01" max="500000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <!-- <div class="button"> -->
-                <input type="submit" id="deposit-btn" value="Deposit">
-                <!-- </div> -->
-            </fieldset>
+                <input type="submit" class="submit-btn" id="deposit-btn" value="Deposit">
+            </div>
         </form>
-        <form id="withdraw-form"class="two withdraw hidden">
-            <fieldset>
+        <form id="withdraw-form"class="form two withdraw hidden">
+            <div>
                 <ul style="list-style-type:none">
                     <li class="">   
                         <label for="withdraw-amount" id="withdraw-label" class="survey-label">Amount:</label>
-                        <input type="number" name="withdraw-amount" id="withdraw-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
+                        <input type="number" name="withdraw-amount" id="withdraw-amount" class="input" min="0.01" max="500000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <!-- <div class="button"> -->
-                <input type="submit" id="withdraw-btn" value="Withdraw">
-                <!-- </div> -->
-            </fieldset>
+                <input type="submit" class="submit-btn" id="withdraw-btn" value="Withdraw">
+            </div>
         </form>
-        <form id="send-form" class="two send hidden">
-            <fieldset>
+        <form id="send-form" class="form two send hidden">
+            <div>
                 <ul style="list-style-type:none">
                     <li class="">   
                         <label for="receiver" id="receive-label" class="survey-label">Send To:</label>
-                        <input type="username" name="receiver" id="receiver" class="input" required>
+                        <input type="username" name="receiver" id="receiver" class="input" oninput="this.value = this.value.toLowerCase()" required>
                     </li>
                     <li class="">   
                         <label for="send-amount" id="send-label" class="survey-label">Amount:</label>
-                        <input type="number" name="send-amount" id="send-amount" class="input" min="0.01" max="1000000.00" step="0.01" required>
+                        <input type="number" name="send-amount" id="send-amount" class="input" min="0.01" max="500000.00" step="0.01" required>
                     </li>
                 </ul>            
-                <!-- <div class="button"> -->
-                <input type="submit" id="send-btn" value="Send Money">
-                <!-- </div> -->
-            </fieldset>
+                <input type="submit" class="submit-btn" id="send-btn" value="Send Money">
+            </div>
         </form>
         <div class="two profile hidden">
             <div class="profile-box">
                 <div class="img">
                     <img src="" id="avatar">
                 </div>
-                <div>
-                    <h3><span id="get-name">Name</span></h3>
-                    <h4><span id="get-user">Username</span></h4><br>
+                <div class="profile-header">
+                    <h2><span id="get-name">Name</span></h2>
+                    <h3><span id="get-user">Username</span></h3><br><br>
                     <h2>Balance: <span id="get-balance"></span></h2>
                 </div>
             </div>
-            <div>
-                <a href="#" id="change-name-btn">Change Name</a>
-                <a href="#" id="change-username-btn">Change Username</a>
-                <!-- <a href="#" id="change-pic-btn">Upload Picture</a> -->
-                <!-- <input type='file' id="readUrl" multiple="false" accept="image/*" onchange="upload()">  -->
-                <form id="pictureForm">
-                    <input type='file' value="Upload Picture" />
+            <div class="profile-actions">
+                <form id="picture-form">
+                    <label class="edit-btn"> Upload Picture
+                        <input type='file'>
+                    </label>
                 </form>
+                <button class="edit-btn" id="change-name-btn">Change Name</button>
+                <button class="edit-btn" id="change-username-btn">Change Username</button>
             </div>
         </div>
+        <div class="transaction"><p>Transaction Limit: ₱500,000 per transaction</p></div>
     </div>
 
-    <!-- <div class="alert">
-        <span class="close-btn" onclick="this.parentsElemenet.style.display='none';">&times;</span>
-        This is an alert box.
-    </div> -->
+    <div class="alert hidden">
+        <span class="close-btn" onclick="parentElement.classList.add('hidden');">&times;</span>
+        <span id="error">This is an alert box.</span>
+    </div>
 
-
+    <div class="success hidden">
+        <span class="close-btn" onclick="parentElement.classList.add('hidden');">&times;</span>
+        <span id="success-msg">This is a success box.</span>
+    </div>
 
     <script src="app.js" type="text/javascript"></script>
     <!-- <footer></footer> -->

@@ -258,7 +258,7 @@ button.light {
 }
 
 @keyframes slide {
-	0%, 49.99% {
+	0%, 49% {
 		opacity: 0;
 		z-index: 1;
 	}
@@ -508,7 +508,6 @@ button.light {
     text-align:left;
 }
 
-
 .edit-btn {
 	border-radius: 20px;
 	border: 1px solid #0e486a;
@@ -521,6 +520,11 @@ button.light {
     margin-top:1em;
     margin-left:2em;
     cursor: pointer;
+    opacity:0.9;
+}
+
+.edit-btn:hover{
+    opacity:1.0;
 }
 
 #get-user{

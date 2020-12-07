@@ -11,9 +11,6 @@ let User = function(){
 
 let user = new User;
 
-
-
-
 class Bank {
     constructor() {
         this.usersArray = [];
@@ -122,7 +119,7 @@ class Bank {
                 startStateTwo();
     
                 document.querySelector(".success").classList.remove('hidden');
-                document.querySelector("#success-msg").innerText = "Deposited " + formatter.format(amount) + " to " + user.username;
+                document.querySelector("#success-msg").innerText = "Withdrew " + formatter.format(amount) + " from " + user.username;
                 setTimeout(function () { document.querySelector(".success").classList.add('hidden'); }, 3000);
     
                 console.log("Withdrew " + formatter.format(amount) + " from " + user.username);
@@ -454,6 +451,4 @@ const formatter = new Intl.NumberFormat('fil-PH', {
 
   
 // console.log(formatter.format(2500)); /* ₱2,500.00 */
-
-
 

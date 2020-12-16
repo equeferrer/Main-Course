@@ -1,0 +1,19 @@
+.box{
+    align-items: center;
+    text-align:center;
+    background-color: black;
+    color: white;
+    margin-top: 1em;
+    width: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hello-box{
+    align-items: center;
+    text-align:center;
+    top:50%;
+    right:50%;
+    display:absolute;
+}

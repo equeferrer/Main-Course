@@ -1,0 +1,134 @@
+*{
+    font-family:"Montserrat";
+    margin:0;
+    padding:0;
+}
+
+.game-box{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 135px);
+    margin:50px 300px 50px 300px;
+    align-items: center;
+
+}
+
+.game-box div{
+    border: 2px dashed black;
+    position: relative;
+}
+
+button{
+    height:100px;
+    visibility:hidden;
+}
+
+.game-box div:nth-child(1){
+    border-top: 0px;
+    border-left:0px;
+}
+
+.game-box div:nth-child(2){
+    border-top: 0px;
+}
+
+.game-box div:nth-child(3){
+    border-top: 0px;
+    border-right:0px;
+}
+
+.game-box div:nth-child(4){
+    border-left:0px;
+}
+
+.game-box div:nth-child(6){
+    border-right:0px;
+}
+
+.game-box div:nth-child(7){
+    border-bottom: 0px;
+    border-left:0px;
+}
+
+.game-box div:nth-child(8){
+    border-bottom: 0px;
+}
+
+.game-box div:nth-child(9){
+    border-bottom: 0px;
+    border-right:0px;
+}
+
+.X::before,
+.X::after{
+    content:'';
+    position:absolute;
+    width:15px;
+    height:100px;
+    background-color: green;
+}
+
+.X::before{
+    transform:rotate(45deg);
+    right: 60px;
+}
+
+.X::after{
+    transform:rotate(-45deg);
+    right: 60px;
+
+}
+
+.O::before,
+.O::after{
+    content:'';
+    position:absolute;
+    width:100px;
+    height:100px;
+    background-color: red;
+    border-radius:50%;
+}
+
+.O::before{
+    right:20px;
+    /* bottom:4px; */
+}
+
+.O::after{
+    left:24px;
+    bottom:10px;
+    width: 75px;
+    height: 80px;
+    background-color: white;
+}
+
+.O, .X{
+    cursor: not-allowed;
+}
+
+.restart{
+    visibility: visible;
+    width: 100px;
+    height: 30px;
+}
+
+.winning-message{
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.8);
+    padding-top:300px;
+    color:white;
+    display:none;
+    z-index:1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.win-text{
+    font-size:60px;
+}

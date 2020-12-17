@@ -11,21 +11,30 @@
 <body>
     <div class="hello-box">
         <button class="hello-btn">Hello</button>
-        
     </div>
     <div class="form-box">
         <form class="name-form">
             <label class="input-text" for="name">Your Name:</label>    
-            <input type="text" class="input-text" id="name" placeholder="Name">
+            <input type="text" class="input-text" id="name" placeholder="Name" required></input>
             <input type="submit" class="submit-btn" id="submit-btn" value="Submit"></input>
         </form>
     </div>
     <div class="box">
         <div> 
-            <span class="display-text">DISPLAY TEXT HERE</span>
+            <span class="display-text">.</span>
         </div>
     </div>
 
+    <div class="names-box">
+        <button class="preset-names" id="jerick">Jerick</button>
+        <button class="preset-names" id="john">John</button>
+        <button class="preset-names" id="pau">Pau</button>
+    </div>
+
+    <div class="extra-functions">
+        <button class="say-hello-btn">sayHello</button>
+        <button class="say-goodbye-btn">sayGoodbye</button>
+    </div>
     <script src="app.js"></script>
 
 </body>

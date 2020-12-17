@@ -1,3 +1,7 @@
+*{
+    font-family:"Montserrat";
+}
+
 .box{
     align-items: center;
     text-align:center;
@@ -24,4 +28,12 @@
     margin-right:auto;
     text-align: center;
     padding-top: 10px;
+}
+
+.names-box, .extra-functions{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    margin-top:10px;
 }

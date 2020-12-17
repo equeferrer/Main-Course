@@ -2,19 +2,29 @@
     font-family:"Montserrat";
 }
 
+body{
+    background-image: linear-gradient(to left top, #6bd1d1, #5ecbda, #5ac5e2, #5fbde8, #6db5ea, #86aeee, #a3a5eb, #bf9be1, #e590cc, #fe89ab, #ff8b84, #fb975f);    height:90vh;
+    background-repeat: none;
+}
+
 .box{
     align-items: center;
     text-align:center;
-    background-color: black;
+    background-color: rgba(0,0,0,0.8);
     color: white;
     margin-top: 1em;
     width: 400px;
     display: block;
     margin-left:auto;
     margin-right:auto;
+    padding: 1em 5em 1em 5em;
+    font-weight:800;
+    letter-spacing: 2px;
 }
 
 .hello-box{
+    margin-top:100px;
+
     align-items: center;
     text-align:center;
     top:50%;
@@ -36,4 +46,57 @@
     margin-right:auto;
     text-align:center;
     margin-top:10px;
+}
+
+.preset-names{
+    padding: 5px 20px 5px 20px;
+    border-radius:5px;
+    background-color: #FB975F;
+    border: 2px solid black;
+    margin-right:5px;
+}
+
+.layer-2{
+    padding: 5px 25px 5px 25px;
+    border-radius:5px;
+    background-color: black;
+    color:  #FB975F;
+    border: 2px solid pink;
+}
+
+.animate{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+      
+@keyframes slidein {
+    from {
+        margin-left: 150px;
+        width: 400%;
+    }  
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.hello-btn, .submit-btn{
+    background-color:transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight:600;
+}
+
+.hello-btn:hover, .submit-btn:hover{
+    background-color:white;
+    color:black;
+    cursor: pointer;
+}
+
+.input-text{
+    background-color:transparent;
+    color:white;
+    border: 2px solid lightgray;
+
 }

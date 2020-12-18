@@ -73,17 +73,7 @@ body {
     text-align: center;
 }
 
-/* .add__type {
-    width: 55px;
-    border: 1px solid #e7e7e7;
-    height: 44px;
-    font-size: 18px;
-    color: inherit;
-    background-color: #fff;
-    margin-right: 10px;
-    font-weight: 300;
-    transition: border 0.3s;
-} */
+
 
 .add__description {
     border: 1px solid #e7e7e7;
@@ -99,11 +89,11 @@ body {
 
 .add__description { width: 400px;}
 
-.add__btn {
+.add-btn {
     font-size: 35px;
     background: none;
     border: none;
-    color: #28B9B5;
+    color: black;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -111,7 +101,7 @@ body {
     margin-left: 10px;
 }
 
-.add__btn:active { transform: translateY(2px); }
+.add-btn:active { transform: translateY(2px); }
 
 /* .add__type:focus, */
 .add__description:focus{
@@ -119,7 +109,7 @@ body {
     border: 1px solid #28B9B5;
 }
 
-.add__btn:focus { outline: none; }
+.add-btn:focus { outline: none; }
 
 /***** LISTS *****/
 .container {
@@ -144,6 +134,10 @@ h2 {
 .item {
     padding: 38px;
     border-bottom: 1px solid #e7e7e7;
+}
+
+.item:hover {
+    background-color:rgba(0, 0, 0, .15) !important;
 }
 
 .item:first-child { border-top: 1px solid #e7e7e7; }
@@ -176,7 +170,7 @@ h2 {
 }
 
 .item__delete {
-    float: left;
+    float: right;
 }
 
 .item__delete--btn {
@@ -196,3 +190,36 @@ h2 {
 .item:hover .item__delete--btn { display: block; }
 .item:hover .item__value { transform: translateX(-20px); }
 .item:hover .item__percentage { transform: translateX(-20px); }
+
+.completeText {
+    color: lightgrey;
+    text-decoration: line-through !important;
+}
+
+
+.ion-ios-checkmark-outline,
+.ion-ios-close-outline{
+    pointer-events: none;
+}
+
+.item__delete{
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    color: red;
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.item__complete{
+    /* position: absolute;
+    left: 0; */
+    float:left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    color: green;
+    font-size: 20px;
+}

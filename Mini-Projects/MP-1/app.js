@@ -72,7 +72,7 @@ document.querySelector(".say-goodbye-btn").addEventListener('click', () => {
     document.querySelector('.display-text').classList.add("animate");
     setTimeout(function () { document.querySelector('.display-text').classList.remove("animate") }, 5000);
     if (person.name !== "" && btn.innerHTML !== "Clear"){
-        document.querySelector('.display-text').innerText = `Goodbye, ${person.name}!`;
+        document.querySelector('.display-text').innerText = `Good bye, ${person.name}!`;
         btn.innerHTML = "Clear";
 
     } else if (btn.innerHTML === "Clear") {

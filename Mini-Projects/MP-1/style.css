@@ -12,11 +12,11 @@ body{
     text-align:center;
     background-color: rgba(0,0,0,0.8);
     color: white;
-    margin-top: 1em;
+    margin: 2em auto 2em auto;
     width: 400px;
     display: block;
-    margin-left:auto;
-    margin-right:auto;
+    /* margin-left:auto;
+    margin-right:auto; */
     padding: 1em 5em 1em 5em;
     font-weight:800;
     letter-spacing: 2px;
@@ -24,7 +24,6 @@ body{
 
 .hello-box{
     margin-top:100px;
-
     align-items: center;
     text-align:center;
     top:50%;
@@ -50,18 +49,23 @@ body{
 
 .preset-names{
     padding: 5px 20px 5px 20px;
-    border-radius:5px;
-    background-color: #FB975F;
+    border-radius:20px;
+    background-color: transparent;
     border: 2px solid black;
     margin-right:5px;
+    outline:none;
+    cursor: pointer;
 }
 
 .layer-2{
     padding: 5px 25px 5px 25px;
-    border-radius:5px;
-    background-color: black;
-    color:  #FB975F;
+    border-radius:20px;
+    background-color: rgba(250,250,250,0.5);
+    color: black;
     border: 2px solid pink;
+    outline:none;
+    cursor: pointer;
+    font-weight:800;
 }
 
 .animate{
@@ -97,6 +101,9 @@ body{
 .input-text{
     background-color:transparent;
     color:white;
-    border: 2px solid lightgray;
+    border: 2px solid white;
+}
 
+.input-text::placeholder{
+    color:white;
 }

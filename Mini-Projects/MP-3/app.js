@@ -1,4 +1,8 @@
-document.querySelector("#date").innerText = "01/04/2021"
+let options = {year: 'numeric', month: 'short', day: 'numeric' };
+let currentDate = new Date();
+// document.querySelector("#date").innerText = "01/04/2021"
+document.querySelector("#date").innerText = currentDate.toLocaleDateString('en-US', options)
+
 
 const todoInput = document.querySelector(".add__description");
 const todoButton = document.querySelector(".add-btn");

@@ -12,7 +12,8 @@ todoButton.addEventListener('click', addToDo)
 
 function addToDo(event) {
 	event.preventDefault();
-// TO DO DIV
+	if (todoInput.value !== "") {
+		// TO DO DIV
 	const todoDiv = document.createElement('div');
 	todoDiv.classList.add('item');
 // Checkmark button
@@ -35,6 +36,11 @@ function addToDo(event) {
     todoList.appendChild(todoDiv)
 //Clear ToDo Input Value
     todoInput.value="";
+	} else if (todoInput.value === ""){
+		todoInput.classList.add('red-focus');
+		alert("Cannot add a blank task");
+		setTimeout(function () { todoInput.classList.remove('red-focus'); }, 3000);
+	}
 }
 
 todoList.addEventListener('click', toDoAction);

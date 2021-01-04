@@ -45,12 +45,6 @@ class Game {
         this.playerX = playerX
         this.playerO = playerO
     }
-    // startGame(){
-    //     playerX.turn = true;
-    //     playerO.turn = false;
-    //     playerX.winner = false;
-    //     playerO.winner = false;
-    // }
     nextPlayer(){
         if (playerX.turn === true){ 
             playerX.turn = false;
@@ -96,5 +90,9 @@ class Game {
 let game = new Game;
 
 document.querySelector('.restart').addEventListener('click', () => {
+    window.location.reload()
+});
+
+document.querySelector('.reset').addEventListener('click', () => {
     window.location.reload()
 });

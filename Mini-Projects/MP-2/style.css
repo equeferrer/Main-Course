@@ -15,7 +15,7 @@
 }
 
 .game-box div{
-    border: 2px dashed black;
+    border: 1px dashed gray;
     position: relative;
 }
 
@@ -96,7 +96,7 @@ button{
 }
 
 .O::after{
-    left:24px;
+    left:25px;
     bottom:10px;
     width: 75px;
     height: 80px;
@@ -131,4 +131,10 @@ button{
 
 .win-text{
     font-size:60px;
+}
+
+h1{
+    margin-top: 1em;
+    align-items: center;
+    text-align: center;
 }

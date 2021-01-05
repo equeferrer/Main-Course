@@ -63,3 +63,31 @@ function toDoAction(e){
 		todo.classList.toggle('completeText')
 	}
 }
+
+const newQuoteButton = document.querySelector('#new-quote');
+
+newQuoteButton.addEventListener('click',getQuote);
+
+async function getQuote() {
+	console.log("quote button was clicked");
+	try {
+		const response = await fetch(endpoint)
+		if (!response.ok) {
+			throw Error(response.statusText)
+		}
+		const json = await response.json();
+		displayQuote(json.content, json.author)
+	} catch (err) {
+		console.log(err)
+		alert('Failed to fetch new quote');
+	}
+}
+
+const endpoint = 'https://api.quotable.io/random';
+
+function displayQuote(quote, author) {
+	let quoteText = document.querySelector('#quote-text');
+	let quoteAuthor = document.querySelector('#quote-author');
+	quoteText.textContent = quote;
+	quoteAuthor.textContent = `- ${author}`
+}

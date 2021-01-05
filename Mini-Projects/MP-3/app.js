@@ -64,6 +64,7 @@ function toDoAction(e){
 	if (item.classList[0] === "item__complete"){
 		const todo = item.nextSibling;
 		todo.classList.toggle('completeText')
+		item.classList.toggle('completeText')
 	}
 }
 

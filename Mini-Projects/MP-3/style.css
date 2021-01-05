@@ -201,9 +201,10 @@ h2 {
 .item:hover .item__percentage { transform: translateX(-20px); }
 
 .completeText {
-    color: gray;
+    color: gray !important;
     font-weight:100;
     text-decoration: line-through !important;
+    opacity: 0.8
 }
 
 

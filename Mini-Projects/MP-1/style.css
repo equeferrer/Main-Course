@@ -3,7 +3,8 @@
 }
 
 body{
-    background-image: linear-gradient(to left top, #6bd1d1, #5ecbda, #5ac5e2, #5fbde8, #6db5ea, #86aeee, #a3a5eb, #bf9be1, #e590cc, #fe89ab, #ff8b84, #fb975f);    height:90vh;
+    background-image: linear-gradient(to right top, #777777, #898989, #9b9b9b, #aeaeae, #c1c1c1, #c2c2c2, #c3c3c3, #c4c4c4, #b3b3b3, #a2a2a2, #919191, #818181);
+    height:90vh;
     background-repeat: none;
 }
 
@@ -15,11 +16,10 @@ body{
     margin: 2em auto 2em auto;
     width: 400px;
     display: block;
-    /* margin-left:auto;
-    margin-right:auto; */
     padding: 1em 5em 1em 5em;
-    font-weight:800;
     letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap; 
 }
 
 .hello-box{
@@ -28,7 +28,6 @@ body{
     text-align:center;
     top:50%;
     right:50%;
-    /* position:absolute; */
 }
 
 .form-box{
@@ -49,7 +48,7 @@ body{
 
 .preset-names{
     padding: 5px 20px 5px 20px;
-    border-radius:20px;
+    border-radius:5px;
     background-color: transparent;
     border: 2px solid black;
     margin-right:5px;
@@ -58,11 +57,13 @@ body{
 }
 
 .layer-2{
-    padding: 5px 25px 5px 25px;
-    border-radius:20px;
-    background-color: rgba(250,250,250,0.5);
+    padding: 5px 22px 5px 22px;
+    margin-left:1px;
+    margin-right:3px;
+    border-radius:5px;
+    background-color: rgba(57, 255, 20,0.3);   
     color: black;
-    border: 2px solid pink;
+    border: 2px solid white;
     outline:none;
     cursor: pointer;
     font-weight:800;
@@ -92,10 +93,23 @@ body{
     font-weight:600;
 }
 
+.hello-btn{
+    font-size:22px;
+    padding: 1px 10px 1px 10px; 
+}
+
 .hello-btn:hover, .submit-btn:hover{
     background-color:white;
     color:black;
     cursor: pointer;
+}
+
+.layer-2:hover{
+    background-color:#39ff14
+}
+
+.preset-names:hover{
+    background-color: white;
 }
 
 .input-text{
@@ -106,4 +120,12 @@ body{
 
 .input-text::placeholder{
     color:white;
+}
+
+.display-text{
+    font-family: 'Electrolize', sans-serif;
+    font-size:30px;
+    color:#39ff14;
+    font-weight:600;
+    letter-spacing: 1.5px;
 }

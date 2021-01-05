@@ -8,32 +8,31 @@
         <title>To-Do List</title>
     </head>
     <body>
-        
-        <div class="top">
-            <div class="top-header">
-                <div class="title">
-                    To-Do List: <span id="date"></span>
+        <div class="flex">
+            <div class="top">
+                <div class="top-header">
+                    <div class="title">
+                        <u>To-Do List</u>: <br> <span id="date"></span>
+                    </div>
                 </div>
-            </div>
-        </div>      
-        
-        <div class="bottom">
-            <div class="add">
-                <div class="add__container">
-                    <input type="text" class="add__description" placeholder="Add description">
-                    <button class="add-btn"><i class="ion-ios-plus-outline"></i></button>
+            </div>      
+            
+            <div class="bottom">
+                <div class="add">
+                    <form class="add__container">
+                        <input type="text" class="add__description" placeholder="Add task">
+                        <input type="submit" class="add-btn" id="add-btn" value=""><button class="add-btn"><i class="ion-ios-plus-outline"></i></button></input>
+                    </form>
                 </div>
+                <div class="container">
+                    <div class="task-list">
+                        <h2 class="todo__title">Things To Do:</h2>
+                        <div class="task-list" id="task-container"></div>
+                    </div>
+                </div>            
             </div>
-            
-            <div class="container">
-                <div class="task-list">
-                    <h2 class="todo__title">Things To Do:</h2>
-                    <div class="task-list" id="task-container"></div>
-                </div>
-            </div>
-            
-            
         </div>
+
         
         <script src="app.js"></script>
     </body>

@@ -44,7 +44,10 @@ function addToDo(event) {
 			todoInput.value="";
 	} else if (todoInput.value === ""){
 		todoInput.classList.add('red-focus');
-		alert("Cannot add a blank task");
+		document.querySelector(".alert").classList.remove('hidden');
+		document.querySelector("#error").innerText = "Cannot add a blank task";
+		setTimeout(function () { document.querySelector(".alert").classList.add('hidden'); }, 3000);
+		// alert("Cannot add a blank task");
 		setTimeout(function () { todoInput.classList.remove('red-focus'); }, 3000);
 	}
 }
@@ -91,3 +94,9 @@ function displayQuote(quote, author) {
 	quoteText.textContent = quote;
 	quoteAuthor.textContent = `- ${author}`
 }
+
+// Close button
+document.querySelector(".close-btn").addEventListener('click', function(){
+    document.querySelector(".alert").classList.add("hidden");
+});
+

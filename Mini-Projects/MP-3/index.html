@@ -16,7 +16,7 @@
                         <u>To-Do List</u>: <br> <span id="date"></span>
                     </div>
                     <div class="quote-box">
-                        <button type="button" id="new-quote" class="button">Generate a new quote</button>
+                        <button type="button" id="new-quote" class="button">Generate quote</button>
                         <div id="quote-text"></div>
                         <div id="quote-author"></div>
                     </div>
@@ -24,6 +24,10 @@
             </div>      
             
             <div class="bottom">
+                <div class="alert hidden">
+                    <span class="close-btn" onclick="parentElement.classList.add('hidden');">&times;</span>
+                    <span id="error">This is an alert box.</span>
+                </div>
                 <div class="add">
                     <form class="add__container">
                         <input type="text" class="add__description" placeholder="Add task">

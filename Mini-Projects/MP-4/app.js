@@ -26,18 +26,25 @@ async function getRepo() {
 			throw Error(response.statusText)
 		}
 		const json = await response.json();
-		displayRepo(json.full_name, json.owner, json.language, json.updated_at, json.owner.avatar_url)
+		displayRepo(json.full_name, json.owner.avatar_url, json.language, json.updated_at, json.owner.html_url, json.owner.id)
 	} catch (err) {
 		console.log(err)
 		alert('Failed to fetch new quote');
 	}
 }
   
-function displayRepo(name, avatar, language, date, avatar, ) {
+function displayRepo(name, avatar, language, date, url, id) {
 	// let quoteText = document.querySelector('#quote-text');
 	// let quoteAuthor = document.querySelector('#quote-author');
-	console.log(name, avatar, language, date, avatar)
-	// quoteAuthor.textContent = author;
+	console.log(name, avatar, language, date, url, id)
+    // quoteAuthor.textContent = author;
+    document.querySelector('#date').innerHTML = `Last updated: ${date}`;
+    document.querySelector('#name').innerHTML = name;
+    document.querySelector('#language').innerHTML = language;
+    document.querySelector('.img').src = avatar;
+    document.querySelector('#link').innerHTML = `<a id="link" href ="${url}">Visit Repository</a>`;
+    document.querySelector('#id').innerHTML = `ID: ${id}`;
+   
 }
 
 getRepo();

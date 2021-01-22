@@ -6,22 +6,22 @@
 # In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself
 # Examples
 
-def is_square(int)
-    sqrt = int**0.5
+# def is_square(int)
+#     sqrt = int**0.5
 
-    if (int >= 0) and (sqrt % 1 == 0)
-        return true
-    else 
-        return false
-    end
-end
+#     if (int >= 0) and (sqrt % 1 == 0)
+#         return true
+#     else 
+#         return false
+#     end
+# end
 
-puts is_square(-1)
-puts is_square(0)
-puts is_square(3)
-puts is_square(4)
-puts is_square(25)
-puts is_square(26)
+# puts is_square(-1)
+# puts is_square(0)
+# puts is_square(3)
+# puts is_square(4)
+# puts is_square(25)
+# puts is_square(26)
 
 # 1 => false
 # 0 => true
@@ -40,12 +40,12 @@ if arr.include?(number)
 end
 
 # #.2
-num = gets.chomp()
-if (num.to_i >= 0) and (num.to_i <= 50)
+num = gets.chomp().to_i
+if (num >= 0) and (num <= 50)
     puts "0-50"
-elsif (num.to_i >= 50) and (num.to_i <= 100)
+elsif (num >= 50) and (num <= 100)
     puts "0-100"
-elsif (num.to_i > 100)
+elsif (num > 100)
     puts 'over 100'
 else 
     puts "not a valid number"

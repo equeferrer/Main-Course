@@ -22,8 +22,8 @@ end
 
 class BananaCake < Confection; end
 
-confection = Confection.new
-confection.bake()
+# confection = Confection.new
+# confection.bake()
 
 cupcake = Cupcake.new
 cupcake.bake()

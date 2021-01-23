@@ -5,19 +5,19 @@
 # and then prints “Applying frosting” for Cupcake only.
 
 class Confection
-	def bake
-		puts "Baking at 350 degrees for 25 minutes."
-	end
+    def bake
+        puts "Baking at 350 degrees for 25 minutes."
+    end
 end
 
 module Frosted
-	def frosting
-		puts "Applying Frosting"
-	end
+    def frosting
+        puts "Applying Frosting"
+    end
 end
 
 class Cupcake < Confection
-	include Frosted
+    include Frosted
 end
 
 class BananaCake < Confection; end
@@ -36,46 +36,46 @@ banana_cake.bake()
 
 module AdminPermisson
     def edit_users_profile
-    	puts "Admin updated all users profile"
+        puts "Admin updated all users profile"
     end
 end
   
 module BuyerPermission
     def buy
-    	puts "Buyer has bought an item"
-	end
+        puts "Buyer has bought an item"
+    end
 end
   
 class User
-	attr_writer :password
+    attr_writer :password
     def initialize(username, password, ip_address)
-		@username = username
-		@password = password
-		@ip_address = ip_address
+        @username = username
+        @password = password
+        @ip_address = ip_address
     end
-	
-	def change_password(new_password)
-		@password = new_password
-	end
+    
+    def change_password(new_password)
+        @password = new_password
+    end
     protected
-	def login
-    	puts "User logged in. IP address: #{@ip_address}"
+    def login
+        puts "User logged in. IP address: #{@ip_address}"
     end
 end
   
   
 class Admin < User
-	include AdminPermisson
-	def admin_login
-		login
-	end
+    include AdminPermisson
+    def admin_login
+        login
+    end
 end
   
 class Buyer < User
-	include BuyerPermission
-	def buyer_login
-		login
-	end
+    include BuyerPermission
+    def buyer_login
+        login
+    end
 end
   
 ## execute

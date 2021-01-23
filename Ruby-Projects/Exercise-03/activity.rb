@@ -1,36 +1,36 @@
-# # Activity 1: 
-# # We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake. 
-# # Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. 
-# # Write a prepare method for your Cupcake and Banana Cake class that prints “Baking at 350 degrees for 25 minutes.“, 
-# # and then prints “Applying frosting” for Cupcake only.
+# Activity 1: 
+# We have a Confection class representing baked desserts. Your job is to create a new subclass of Confection, named Cupcake and Banana Cake. 
+# Cupcakes and Banana Cakes need to be baked just like other confections, but cupcakes also need to be frosted afterward. 
+# Write a prepare method for your Cupcake and Banana Cake class that prints “Baking at 350 degrees for 25 minutes.“, 
+# and then prints “Applying frosting” for Cupcake only.
 
-# class Confection
-# 	def bake
-# 		puts "Baking at 350 degrees for 25 minutes."
-# 	end
-# end
+class Confection
+	def bake
+		puts "Baking at 350 degrees for 25 minutes."
+	end
+end
 
-# module Frosted
-# 	def frosting
-# 		puts "Applying Frosting"
-# 	end
-# end
+module Frosted
+	def frosting
+		puts "Applying Frosting"
+	end
+end
 
-# class Cupcake < Confection
-# 	include Frosted
-# end
+class Cupcake < Confection
+	include Frosted
+end
 
-# class BananaCake < Confection; end
+class BananaCake < Confection; end
 
-# # confection = Confection.new
-# # confection.bake()
+# confection = Confection.new
+# confection.bake()
 
-# cupcake = Cupcake.new
-# cupcake.bake()
-# cupcake.frosting()
+cupcake = Cupcake.new
+cupcake.bake()
+cupcake.frosting()
 
-# banana_cake = BananaCake.new
-# banana_cake.bake()
+banana_cake = BananaCake.new
+banana_cake.bake()
 
 # Activity 2:
 

@@ -1,7 +1,7 @@
 -- continuation from exercise and exercise-2 from Exercise-05
 
 CREATE TABLE classrooms(
-  id integer,
+  id integer PRIMARY KEY,
   student_id integer,
   section VARCHAR(50));
 

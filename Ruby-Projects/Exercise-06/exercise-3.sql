@@ -16,7 +16,7 @@ Insert into classrooms Values (8, 8, 'B');
 Insert into classrooms Values (9, 9, 'B');
 Insert into classrooms Values (10, 10, 'C');
 
-select * from classrooms INNER JOIN orders o on classrooms.id = students.id
+select * from classrooms INNER JOIN students on classrooms.id = students.id
 select * from classrooms LEFT JOIN students on classrooms.id = students.id
 select * from classrooms RIGHT JOIN students on classrooms.id = students.id
 select * from classrooms FULL JOIN students on classrooms.id = students.id

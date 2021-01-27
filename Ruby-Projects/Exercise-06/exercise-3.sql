@@ -3,7 +3,7 @@
 CREATE TABLE classrooms(
   id integer,
   student_id integer,
-  section VARCHAR);
+  section VARCHAR(50));
 
 Insert into classrooms Values (1, 1, 'A');
 Insert into classrooms Values (2, 2, 'A');
